@@ -74,6 +74,8 @@ You may use Axios to interact with this API. Its responses contain nested object
 }
 ```
 
+**IMPORTANT INFO**: The alphavantage API response is built in a pretty strange way. Since it has spaces and numbers in it's JSON keys, we are unable to use dot notation.  Instead, use bracket syntax... for example `res.data["Meta Data"]["2. Symbol"]` will return `MSFT`
+
 There is a very new Object method in Javascript that can be very useful when dealing with responses like this, `Object.values()`. It can extract all of the values in an object and place them into an array. See [documentation here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values); it's an 'experimental' feature and isn't supported in IE at all.
 
 See also [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
